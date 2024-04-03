@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section class="calc1">
+            <input type="text" id="inp1" placeholder="0">
+            <div>
+                <button onclick="_calc(1)">1</button>
+                <button onclick="_calc(2)">2</button>
+                <button onclick="_calc(3)">3</button>
+                <button onclick="_op('+')">+</button>
+                <button onclick="_calc(4)">4</button>
+                <button onclick="_calc(5)">5</button>
+                <button onclick="_calc(6)">6</button>
+                <button onclick="_op('-')">-</button>
+                <button onclick="_calc(7)">7</button>
+                <button onclick="_calc(8)">8</button>
+                <button onclick="_calc(9)">9</button>
+                <button onclick="_op('*')">*</button>
+                <button onclick="_clear()">C</button>
+                <button onclick="_calc('0')">0</button>
+                <button onclick="_result()" class="equal">=</button>
+                <button onclick="_op('/')">/</button>
+            </div>
+        </section>
+        <section class="calc2">
+            <input type="text" id="inp2">
+            <div>
+                <button onclick="_calc2(1)">1</button>
+                <button onclick="_calc2(2)">2</button>
+                <button onclick="_calc2(3)">3</button>
+                <button onclick="_op('+')">+</button>
+                <button onclick="_calc2(4)">4</button>
+                <button onclick="_calc2(5)">5</button>
+                <button onclick="_calc2(6)">6</button>
+                <button onclick="_op('-')">-</button>
+                <button onclick="_calc2(7)">7</button>
+                <button onclick="_calc2(8)">8</button>
+                <button onclick="_calc2(9)">9</button>
+                <button onclick="_op('*')">*</button>
+                <button onclick="_clear()">C</button>
+                <button onclick="_calc2('0')">0</button>
+                <button onclick="_result()" class="equal">=</button>
+                <button onclick="_op('/')">/</button>
+            </div>
+        </section>
+        <script>
+            let inp1 = document.getElementById("inp1")
+            let inp2 = document.getElementById("inp2")
+            let calc1 = document.getElementsByClassName('calc1')[0]
+            let calc2 = document.getElementsByClassName('calc2')[0]
+            let num1
+            let num2
+            let oprator
+            function _calc(x) {
+                inp1.value += x
+                num1 = +inp1.value
+            }
+            function _op(o) {
+                console.log(o)
+                oprator = o
+                calc1.style.display = "none"
+                calc2.style.display = "flex"
+            }
+            function _calc2(y) {
+                inp2.value += y
+                num2 = +inp2.value
+            }
+            function _result() {
+
+                if (oprator == '+') {
+                    num1 += num2
+                }
+                else if (oprator == '-') {
+                    num1 -= num2
+                }
+                else if (oprator == '/') {
+                    num1 /= num2
+                }
+                else {
+                    num1 *= num2
+                }
+
+                inp2.value = num1
+            }
+            function _clear() {
+                inp1.value=null
+                console.log(inp2.value=null)
+                calc2.style.display = "none"
+                calc1.style.display = "flex"
+            }
+        </script>
+    </main>
+</body>
+
+</html>

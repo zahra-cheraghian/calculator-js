@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/balance-110850_1280.jpg);
+    background-size:cover ;
+    display: flex;
+    align-items: center;
+    position: relative;
+    >.calc1{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 15% ;
+        box-shadow: 6px 6px 13px black;
+        border-radius: 3%;
+        position: absolute;
+        >#inp1,
+        >div{
+            width: 80%;
+        }
+        >#inp1{
+            height: 50px;
+            padding: 5px;
+            font-size: 18px;
+            
+        }
+        >div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            >button{
+                font-size: 18px;
+                width: 25%;
+                height: 60px;
+
+            }
+        }
+        
+    }
+    >.calc2{
+        width: 400px;
+        height: 400px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 15% ;
+        box-shadow: 6px 6px 13px black;
+        border-radius: 3%;
+        position: absolute;
+        >#inp2,
+        >div{
+            width: 80%;
+        }
+        >#inp2{
+            height: 50px;
+            padding: 5px;
+            font-size: 18px;
+            
+        }
+        >div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            >button{
+                font-size: 18px;
+                width: 25%;
+                height: 60px;
+
+            }
+        }
+        
+    }
+}
